@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+
+  "model": "sonnet",
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-sonnet-5": { "effortLevel": "xhigh" }
+  },
+  "theme": "dark",
+  "enableWorkflows": true,
+  "cleanupPeriodDays": 7,
+
+  "permissions": {
+    "defaultMode": "plan",
+    "disableBypassPermissionsMode": "disable",
+    "disableAutoMode": "disable",
+
+    "allow": [
+      "Bash(ls *)", "Bash(pwd)", "Bash(tree *)", "Bash(stat *)", "Bash(file *)",
+      "Bash(du *)", "Bash(df *)", "Bash(realpath *)", "Bash(readlink *)",
+      "Bash(basename *)", "Bash(dirname *)",
+      "Bash(cat *)", "Bash(head *)", "Bash(tail *)", "Bash(wc *)",
+      "Bash(sort *)", "Bash(uniq *)", "Bash(cut *)", "Bash(tr *)", "Bash(column *)",
+      "Bash(diff *)", "Bash(cmp *)", "Bash(md5sum *)", "Bash(sha256sum *)",
+      "Bash(jq *)", "Bash(grep *)", "Bash(egrep *)", "Bash(fgrep *)",
+      "Bash(which *)", "Bash(whereis *)", "Bash(type *)", "Bash(command -v *)",
+      "Bash(ps *)", "Bash(pgrep *)", "Bash(top -b *)", "Bash(free *)", "Bash(uptime)",
+      "Bash(uname *)", "Bash(hostname *)", "Bash(whoami)", "Bash(id *)", "Bash(groups *)",
+      "Bash(date *)", "Bash(nproc)", "Bash(lscpu)", "Bash(lsblk *)", "Bash(lsb_release *)",
+      "Bash(echo *)",
+      "Bash(ip a *)", "Bash(ip addr *)", "Bash(ip route *)", "Bash(ss *)", "Bash(netstat *)",
+      "Bash(dig *)", "Bash(nslookup *)", "Bash(host *)", "Bash(ping -c *)",
+
+      "Bash(git status *)", "Bash(git log *)", "Bash(git diff *)", "Bash(git show *)",
+      "Bash(git blame *)", "Bash(git shortlog *)", "Bash(git reflog *)", "Bash(git describe *)",
+      "Bash(git rev-parse *)", "Bash(git rev-list *)", "Bash(git merge-base *)", "Bash(git name-rev *)",
+      "Bash(git ls-files *)", "Bash(git ls-tree *)", "Bash(git cat-file *)", "Bash(git show-ref *)",
+      "Bash(git diff-tree *)", "Bash(git whatchanged *)", "Bash(git count-objects *)",
+      "Bash(git stash list *)", "Bash(git submodule status *)", "Bash(git worktree list *)",
+      "Bash(git remote show *)", "Bash(git remote get-url *)", "Bash(git config --get *)",
+      "Bash(git branch)", "Bash(git branch -a)", "Bash(git branch -v)", "Bash(git branch -vv)",
+      "Bash(git branch -r)", "Bash(git branch --list *)", "Bash(git branch --show-current)",
+      "Bash(git branch --contains *)",
+      "Bash(git tag)", "Bash(git tag -l *)", "Bash(git tag --list *)",
+
+      "Bash(docker ps *)", "Bash(docker images *)", "Bash(docker image ls *)", "Bash(docker logs *)",
+      "Bash(docker stats --no-stream *)", "Bash(docker version *)", "Bash(docker info *)",
+      "Bash(docker network ls *)", "Bash(docker volume ls *)",
+      "Bash(docker compose ps *)", "Bash(docker compose logs *)",
+
+      "Bash(kubectl get *)", "Bash(kubectl describe *)", "Bash(kubectl logs *)", "Bash(kubectl top *)",
+      "Bash(kubectl explain *)", "Bash(kubectl api-resources *)", "Bash(kubectl version *)",
+      "Bash(kubectl config get-contexts *)", "Bash(kubectl config current-context)",
+      "Bash(kubectl config view --minify)",
+
+      "Bash(helm list *)", "Bash(helm status *)", "Bash(helm show *)",
+
+      "Bash(terraform validate *)", "Bash(terraform fmt -check *)", "Bash(terraform show *)",
+      "Bash(terraform providers *)", "Bash(terraform version *)", "Bash(terraform graph *)",
+      "Bash(terraform state list *)", "Bash(terraform workspace list *)", "Bash(terraform workspace show *)",
+      "Bash(tofu validate *)", "Bash(tofu fmt -check *)", "Bash(tofu show *)",
+      "Bash(tofu providers *)", "Bash(tofu version *)", "Bash(tofu graph *)",
+      "Bash(tofu state list *)", "Bash(tofu workspace list *)", "Bash(tofu workspace show *)",
+
+      "Bash(mise ls *)", "Bash(mise list *)", "Bash(mise current *)", "Bash(mise tasks *)",
+      "Bash(mise task ls *)", "Bash(mise doctor *)", "Bash(mise config ls *)", "Bash(mise --version)",
+      "Bash(uv pip list *)", "Bash(uv pip show *)", "Bash(uv tree *)", "Bash(uv lock --check *)",
+      "Bash(uv --version)",
+      "Bash(pip list *)", "Bash(pip show *)", "Bash(pip freeze *)",
+      "Bash(python3 --version)", "Bash(python --version)",
+      "Bash(ansible --version)", "Bash(ansible-galaxy list *)", "Bash(ansible-lint *)",
+
+      "mcp__opensearch__ListIndexTool",
+      "mcp__opensearch__IndexMappingTool",
+      "mcp__opensearch__SearchIndexTool",
+      "mcp__openstack__set_cloud_name",
+      "mcp__openstack__get_*",
+
+      "Read(**)"
+    ],
+
+    "ask": [
+      "Bash(rm *)",
+      "Bash(rg *)", "Bash(git grep *)",
+      "Bash(git fetch *)", "Bash(git ls-remote *)",
+      "Bash(git config --list *)", "Bash(git config -l *)", "Bash(git remote -v)",
+      "Bash(git push *)", "Bash(git rebase *)", "Bash(git merge *)", "Bash(git cherry-pick *)",
+      "Bash(make *)",
+      "Bash(env *)", "Bash(printenv *)", "Bash(mise env *)",
+      "Bash(kubectl get secret*)", "Bash(kubectl get * secret*)",
+      "Bash(kubectl config view *)",
+      "Bash(kubectl apply *)", "Bash(kubectl delete *)", "Bash(kubectl edit *)",
+      "Bash(helm template *)", "Bash(helm diff *)", "Bash(helm get *)",
+      "Bash(helm install *)", "Bash(helm upgrade *)", "Bash(helm uninstall *)",
+      "Bash(terraform plan *)", "Bash(terraform output *)", "Bash(terraform state show *)",
+      "Bash(terraform apply *)", "Bash(terraform destroy *)", "Bash(terraform init *)",
+      "Bash(terraform state rm *)", "Bash(terraform state mv *)",
+      "Bash(tofu plan *)", "Bash(tofu output *)", "Bash(tofu state show *)",
+      "Bash(tofu apply *)", "Bash(tofu destroy *)", "Bash(tofu init *)",
+      "Bash(tofu state rm *)", "Bash(tofu state mv *)",
+      "Bash(ansible-inventory *)", "Bash(ansible-playbook *)",
+      "Bash(docker inspect *)", "Bash(docker compose config *)",
+      "Bash(docker run *)", "Bash(docker exec *)", "Bash(docker rm *)", "Bash(docker rmi *)",
+      "Bash(docker compose up *)", "Bash(docker compose down *)",
+      "Bash(mise run *)", "Bash(uv run *)",
+      "Bash(curl *)", "Bash(wget *)",
+      "Bash(pip install *)", "Bash(uv pip install *)", "Bash(npm install *)",
+      "Bash(apt *)", "Bash(apt-get *)"
+    ],
+
+    "deny": [
+      "Bash(sudo *)", "Bash(su *)", "Bash(doas *)", "Bash(pkexec *)",
+      "Bash(rm -r*)", "Bash(rm -R*)", "Bash(rm -f*)", "Bash(rm --recursive*)",
+      "Bash(shred *)", "Bash(dd *)", "Bash(mkfs*)",
+      "Bash(chmod -R 777 *)",
+      "Bash(sed -i*)", "Bash(sed --in-place*)",
+      "Bash(git push --force*)", "Bash(git push -f*)",
+      "Bash(git push * --force*)", "Bash(git push * -f*)", "Bash(git push --mirror*)",
+      "Bash(git reset --hard*)", "Bash(git clean *)", "Bash(git branch -D *)",
+      "Bash(git filter-branch *)", "Bash(git stash drop*)", "Bash(git stash clear*)",
+      "Bash(kubectl config view --raw*)",
+      "Bash(history -c*)",
+
+      "Read(//**/.env)", "Read(//**/.env.*)",
+      "Read(//**/*credentials*)", "Read(//**/*secret*)", "Read(//**/*.token)",
+      "Read(//**/id_rsa*)", "Read(//**/id_ed25519*)", "Read(//**/id_ecdsa*)",
+      "Read(//**/*.pem)", "Read(//**/*.key)", "Read(//**/*.p12)", "Read(//**/*.pfx)",
+      "Read(//**/.ssh/**)", "Read(//**/.aws/**)", "Read(//**/.kube/**)", "Read(//**/.gnupg/**)",
+      "Read(//**/.docker/config.json)", "Read(//**/.netrc)", "Read(//**/.npmrc)",
+      "Read(//**/.pypirc)", "Read(//**/.git-credentials)",
+      "Read(//**/clouds.yaml)", "Read(//**/secure.yaml)", "Read(//**/openrc*)",
+      "Read(//**/passwords.yml)", "Read(//**/*vault*)", "Read(//**/.vault_pass*)",
+      "Read(//**/kubeconfig*)",
+      "Read(//**/*.tfstate)", "Read(//**/*.tfstate.*)", "Read(//**/terraform.tfstate.d/**)",
+      "Read(//**/*.tfvars)"
+    ]
+  },
+
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": false,
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh", "~/.aws", "~/.gnupg", "~/.netrc", "~/.git-credentials",
+        "~/.docker/config.json", "~/.config/gh", "~/.npmrc", "~/.pypirc",
+        "~/.config/openstack", "/etc/openstack",
+        "~/.terraform.d/credentials.tfrc.json"
+      ]
+    },
+    "credentials": {
+      "envVars": [
+        { "name": "OS_PASSWORD", "mode": "deny" },
+        { "name": "OS_APPLICATION_CREDENTIAL_SECRET", "mode": "deny" },
+        { "name": "OS_TOKEN", "mode": "deny" },
+        { "name": "AWS_SECRET_ACCESS_KEY", "mode": "deny" },
+        { "name": "AWS_SESSION_TOKEN", "mode": "deny" },
+        { "name": "GITHUB_TOKEN", "mode": "deny" },
+        { "name": "GH_TOKEN", "mode": "deny" },
+        { "name": "ANSIBLE_VAULT_PASSWORD", "mode": "deny" },
+        { "name": "TF_TOKEN_app_terraform_io", "mode": "deny" }
+      ]
+    },
+    "network": {
+      "strictAllowlist": true,
+      "allowedDomains": [
+        "github.com", "*.github.com",
+        "registry.terraform.io", "releases.hashicorp.com", "registry.opentofu.org",
+        "pypi.org", "files.pythonhosted.org",
+        "galaxy.ansible.com"
+      ]
+    },
+    "excludedCommands": [
+      "docker ps *", "docker images *", "docker image ls *", "docker logs *",
+      "docker stats --no-stream *", "docker version *", "docker info *",
+      "docker network ls *", "docker volume ls *",
+      "docker compose ps *", "docker compose logs *"
+    ]
+  },
+
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "~/.claude/hooks/bash-guard.sh" }
+        ]
+      }
+    ]
+  },
+
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/anthropics/claude-plugins-official.git"
+      }
+    }
+  }
+}
+
