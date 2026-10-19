@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "opensearch": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["opensearch-mcp-server-py"]
+    },
+    "openstack": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--refresh-package", "openstack-mcp-guarded",
+        "--from", "git+https://github.com/barozek90/openstack-mcp-guarded.git",
+        "openstack-mcp-guarded"
+      ],
+      "env": { "CLOUD_NAME": "", "DEBUG_MODE": "false" }
+    }
+  }
+}

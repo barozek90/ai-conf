@@ -8,6 +8,7 @@
   },
   "theme": "dark",
   "enableWorkflows": true,
+  "allowAllClaudeAiMcps": true,
   "cleanupPeriodDays": 7,
 
   "permissions": {
@@ -42,6 +43,8 @@
       "Bash(git branch -r)", "Bash(git branch --list *)", "Bash(git branch --show-current)",
       "Bash(git branch --contains *)",
       "Bash(git tag)", "Bash(git tag -l *)", "Bash(git tag --list *)",
+      "Bash(git switch -c *)", "Bash(git switch *)", "Bash(git checkout -b *)",
+      "Bash(git add *)", "Bash(git restore --staged *)", "Bash(git commit *)",
 
       "Bash(docker ps *)", "Bash(docker images *)", "Bash(docker image ls *)", "Bash(docker logs *)",
       "Bash(docker stats --no-stream *)", "Bash(docker version *)", "Bash(docker info *)",
