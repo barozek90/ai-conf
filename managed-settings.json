@@ -76,8 +76,7 @@
       "mcp__opensearch__ListIndexTool",
       "mcp__opensearch__IndexMappingTool",
       "mcp__opensearch__SearchIndexTool",
-      "mcp__openstack__set_cloud_name",
-      "mcp__openstack__get_*",
+      "mcp__openstack",
 
       "Read(**)"
     ],
