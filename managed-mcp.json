@@ -15,6 +15,14 @@
         "openstack-mcp-guarded"
       ],
       "env": { "CLOUD_NAME": "", "DEBUG_MODE": "false" }
+    },
+    "victorialogs": {
+      "type": "stdio",
+      "command": "mcp-victorialogs",
+      "env": {
+        "VL_INSTANCE_ENTRYPOINT": "${VL_INSTANCE_ENTRYPOINT}",
+        "VL_INSTANCE_BEARER_TOKEN": "${VL_INSTANCE_BEARER_TOKEN}"
+      }
     }
   }
 }
