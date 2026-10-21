@@ -77,6 +77,7 @@
       "mcp__opensearch__IndexMappingTool",
       "mcp__opensearch__SearchIndexTool",
       "mcp__openstack",
+      "mcp__victorialogs",
 
       "Read(**)"
     ],
@@ -156,6 +157,7 @@
         { "name": "OS_PASSWORD", "mode": "deny" },
         { "name": "OS_APPLICATION_CREDENTIAL_SECRET", "mode": "deny" },
         { "name": "OS_TOKEN", "mode": "deny" },
+        { "name": "VL_INSTANCE_BEARER_TOKEN", "mode": "deny" },
         { "name": "AWS_SECRET_ACCESS_KEY", "mode": "deny" },
         { "name": "AWS_SESSION_TOKEN", "mode": "deny" },
         { "name": "GITHUB_TOKEN", "mode": "deny" },
